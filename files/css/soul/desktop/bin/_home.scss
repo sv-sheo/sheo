@@ -1,0 +1,188 @@
+
+.content_warp {
+
+	min-height:		90vh;
+
+}
+
+#home_content {}
+#account_content  {padding: 50px 0 0 0; }
+
+.home_content_row {text-align: center; padding: 0 12%; }
+.home_h1          {font-size: 3em; padding: 50px 20px 15px 20px; display: block;}
+.home_text        {font-size: 1.5em; padding: 15px 20px 50px 20px;}
+
+.form .home_h1    {padding: 10px 0 20px 0;}
+.form .home_text  {padding: 20px 0 0;}
+
+.home_form_row 	  {text-align: center; padding: 0 12%; }
+
+.account_content_row 	{text-align: left; padding: 0px 12%; }
+.account_h1          	{font-size: 2.4em; padding: 15px 0; display: block;}
+.account_text        	{font-size: 12pt; line-height: 20pt; padding: 15px 0;}
+
+.form .home_h1    {padding: 10px 0 20px 0;}
+.form .home_text  {padding: 20px 0 0;}
+
+.spl_image {
+    
+    cursor: pointer;
+    opacity: 0.8;
+    &:hover { opacity: 1; }
+    
+}
+
+#footer {
+
+	font-size:		12pt;
+	line-height:	18pt;
+
+	.footer_text {
+
+		padding: 	10px 0 20px 0;
+
+	}
+
+}
+
+.home_app_list 		{ justify-content: 	center; }
+.account_app_list 	{ justify-content: 	flex-start; text-align: center !important; }
+
+.app_list {
+
+	display: 			flex;
+	flex-flow: 			row wrap;
+	align-items: 		flex-start;
+	align-content: 		flex-start;
+	gap: 				20px;
+
+	.app_block {
+
+		width: 			250px;
+		height: 		250px;
+		overflow:		hidden;
+		color:			$light_color;
+		cursor:			pointer;
+		background-color:$light_color;
+
+		&_bg { 				background-size:	cover; }
+		&_blur { 			filter: blur(3px); }
+		&_backdrop_blur { 	backdrop-filter: blur(3px); }
+
+		&:hover .app_block_blur { 			filter: blur(4px); }
+		&:hover .app_block_backdrop_blur { 	backdrop-filter: blur(4px); }
+
+		&_content {
+
+			user-select:	none;
+			padding:		20px;
+			height: 		100%;	
+			overflow: 		hidden;
+			text-decoration:none;
+
+			&:active, &:hover, &:visited {
+
+				text-decoration: 	none !important;
+
+			}
+
+		}
+
+		&_header {
+
+			font-size:		24pt;
+			line-height:	40px;
+			white-space: 	nowrap;
+			overflow:		hidden;
+			margin-bottom:	10px;
+
+		}
+
+		&_title {
+
+			font-size:		18pt;
+			line-height:	30px;
+			margin-bottom:	10px;
+
+		}
+
+		&_description {
+
+			font-size:		12pt;
+			line-height:	18pt;
+
+		}
+
+		&_status {
+
+			font-size:		18pt;
+			line-height:	40px;
+			white-space: 	nowrap;
+			overflow:		hidden;
+			margin-top:		20px;
+
+		}
+
+	}
+
+	.app_block_actilog {
+
+		.app_block_content {
+	
+			color:			$light_color !important;
+
+		}
+
+		&_bg { 				background-image: url(/files/get/images/actilog_ribbon.jpg); background-size: cover; }
+		&_blur { 			background-image: url(/files/get/images/actilog_ribbon.jpg); filter: blur(4px); }
+
+	}
+
+	.app_block_mist {
+
+		box-shadow:			inset 0px 0px 0px 3px $mist_color;
+		color:				$mist_color !important;
+		&:hover {			box-shadow:	inset 0px 0px 3px 3px $mist_color; }
+
+	}
+
+	.app_block_trackbit {
+
+		box-shadow:			inset 0px 0px 0px 3px $trackbit_color;
+		color:				$trackbit_color !important;
+		&:hover {			box-shadow:	inset 0px 0px 3px 3px $trackbit_color; }
+
+	}
+
+	.app_block_budget {
+
+		box-shadow:			inset 0px 0px 0px 3px $budget_color;
+		color:				$budget_color !important;
+		&:hover {			box-shadow:	inset 0px 0px 3px 3px $budget_color; }
+
+	}
+
+	.app_block_todo {
+
+		box-shadow:			inset 0px 0px 0px 3px $todo_color;
+		color:				$todo_color !important;
+		&:hover {			box-shadow:	inset 0px 0px 3px 3px $todo_color; }
+
+	}
+
+	.app_block_life {
+
+		box-shadow:			inset 0px 0px 0px 3px $life_color;
+		color:				$life_color !important;
+		&:hover {			box-shadow:	inset 0px 0px 3px 3px $life_color; }
+
+	}
+
+	/*&::after {
+
+		content: 		"";
+		flex: 			auto;
+
+	}*/
+
+}

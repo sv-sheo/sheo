@@ -1,0 +1,43 @@
+@use "sass:color"; // enable color.scale()
+
+
+$main_font:         	quicksand, sans-serif;
+// $main_color_light:  	#F4ECEB;
+// $main_color_dark:  	 #240000;
+
+$form_active_border:    #1041b6; //#4245C7;
+$form_valid_border:   	#1fb141;
+$form_invalid_border:   #d9534f;
+
+$light_color:           #fdfdfd;
+$light_color_2:         #f0f0f0;
+$light_color_3:         #eaeaea;
+$dark_color:            #333333;
+$dark_color_2:          #111111;
+$dark_color_3:          #000000;
+
+$theme_color:			#006341;
+$error_color: 			#d9534f;
+//$error_color: 			crimson;
+$info_color: 			#5bc0de;
+$success_color: 		#1fb141;
+$warning_color: 		#f0ad4e;
+
+$actilog_color: 		#006341;
+$mist_color: 			#5bc0de;
+$trackbit_color: 		#c7ca14;
+$todo_color: 			#461380;
+$budget_color: 			#1041b6;
+$life_color: 			#d9534f;
+
+// shade variants of colors are at the bottom of this file
+
+$min_width:             720px;
+
+$default_font_size:     16px;
+
+$ribbon_height:			40px;
+
+$menu_width: 			200px;
+
+$content_row_height:	32px;

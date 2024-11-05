@@ -1,0 +1,63 @@
+
+@font-face { font-family: quicksand_light;  src: url(/files/get/fonts/quicksand/quicksand_light_2.ttf); }
+@font-face { font-family: quicksand;        src: url(/files/get/fonts/quicksand/quicksand_regular_2.ttf); }
+@font-face { font-family: quicksand_bold;   src: url(/files/get/fonts/quicksand/quicksand_bold_2.ttf); }
+
+@import '../../common/index';
+@import 'mixins';
+@import 'extends';
+@import 'config';
+
+body, html {
+    
+    padding:        0 !important; 
+    margin:         0 !important; 
+    font-size:      $default_font_size;
+    font-family:    $main_font;
+	color: 			$dark_color_2;
+    
+}
+
+div, section, nav, article {
+    
+    position:       relative;
+    vertical-align: top;
+    padding:        0;
+    margin:         0;
+    box-sizing:     border-box;
+    
+}
+
+#slock {
+    
+    display:        block;
+    margin:         0 auto;
+    min-width:      $min_width;
+    width:          100%;
+    min-height:     100vh;
+    background:     $light_color; 
+
+    #home_bg {
+
+        background-image:   url(/files/get/soul/images/bg.png);
+        opacity:            0.20;
+
+    }
+    
+}
+
+._ {
+
+    display:        inline-block;
+
+}
+
+@import 'bin/sidebar';
+@import 'bin/form';
+@import 'bin/home';
+@import 'bin/other';
+
+
+
+
+

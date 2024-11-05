@@ -1,0 +1,10 @@
+            
+			<section id="app_list" class="app_list {{page}}_app_list {{page}}_content_row">
+
+				{{#each apps}}
+
+					{{>soul_app_block app=this index=@index key=@key}}
+
+				{{/each}}
+				
+			</section>

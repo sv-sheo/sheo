@@ -1,0 +1,19 @@
+--><div class="_ h100p fill wires" data-fill-group="1">
+
+    <div class="content">
+    
+        <div class="__" id="ram_usage">RAM USAGE</div>
+        <div class="__">START TIME: {{start_time}}</div>
+        <div class="__" id="up_time">UP TIME</div>
+        <div class="__" id="requests">TOTAL REQUESTS: {{requests.size}}</div>
+        <button id="shutdown" data-socket_action="shutdown">SHUTDOWN</button>
+        <hr>
+        <button id="add_doc" data-socket_action="add_doc">ADD RANDOM DOC</button>
+        <button id="remove_docs" data-socket_action="remove_docs">REMOVE ALL DOCS</button>
+        {{table items}}
+        <hr>
+        <img src="/files/get/test.jpg?prqi={{request_id}}">
+        
+    </div>
+    
+</div><!--

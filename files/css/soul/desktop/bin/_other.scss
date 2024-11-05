@@ -1,0 +1,16 @@
+
+.invert {
+
+    color: 			$light_color;
+    background: 	$dark_color_2; 
+    
+}
+
+.no_link {
+
+	text-decoration:	none;
+	color:				inherit;
+
+	&:active, &:hover, &:visited { color: inherit; }
+
+}

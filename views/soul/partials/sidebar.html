@@ -1,0 +1,27 @@
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+
+	<div id="sb_bg" class="absolute"><img src="/files/get/soul/images/sidebar.png" /></div>
+
+	<div id="sb_account" class="sb_part">
+
+		<div class="sb_icon"><img src="/files/get/icons/avatar_white.png"></div>
+		{{#if soul}}
+			<a class="sb_link" href="/account">{{soul.nick}}</a>
+			<a class="sb_link" href="/logout">Log Out</a>
+		{{else}}
+			<a class="sb_link" href="/login">LOG IN</a>
+			<a class="sb_link" href="/signin">SIGN IN</a>
+		{{/if}}
+
+	</div>
+
+	<div id="sb_language" class="sb_part">
+
+		<div class="sb_icon"><img src="/files/get/icons/globe_white.png"></div>
+		<a class="sb_link" href="?lang=en">English</a>
+		
+	</div>
+
+</nav>

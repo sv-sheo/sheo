@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head lang="{{language}}">
+        
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name=”description” content=”{{html.description}}”>
+        <meta name="author" content="SHEO">
+        <link rel="icon" href="{{HOST}}{{html.icon}}">
+        
+        <title>{{html.title}}</title>
+        
+        <link href="{{HOST}}files/get/build/other/desktop_preload.css?v={{app.resource_version}}"  type="text/css" rel="stylesheet">
+        <script src="{{HOST}}files/get/build/other/desktop_preload.js?v={{app.resource_version}}"></script>
+        <script src="{{html.webpack_url}}desktop.js?v={{app.resource_version}}"></script>
+        <link href="{{html.webpack_url}}desktop.css?v={{app.resource_version}}" type="text/css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+   
+        <!-- CONTAINER -->
+        <div id="slock">
+
+            <div id="home_bg" class="absolute"></div>
+
+            {{>soul_sidebar }}
+            
+			<div id="account_content" class="content_warp">
+
+				<div class="account_content_row">
+				
+					<a class="account_h1 no_link" href="/">SHEO</a>
+					<a class="account_h1 no_link" href="/account">{{soul.nick}}</a>
+					<div class="account_text">
+						Currently logged in soul is: {{soul.nick}}<br>
+						ID: {{soul.id}}<br>
+						E-mail: {{soul.email}}<br>
+						Logged in at {{soul.logged_in_time}}<br>
+						{{results.action.text}}<br>
+						<a class="button" href="logout">Log Out</a>
+					</div>
+
+					<div class="account_h1" >MY APPS</div>
+					
+				</div>
+
+				<!-- APPS -->
+				{{>soul_app_list page="account" }}
+
+			</div>
+
+            {{>soul_footer }}
+            
+            
+        </div>
+        
+        {{>soul_js_data PRELOAD_DATA=PRELOAD_DATA }}
+        
+    </body>
+    
+</html>

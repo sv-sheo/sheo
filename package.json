@@ -1,0 +1,18 @@
+{
+  "name": "ss-site-sheo",
+  "version": "0.0.0",
+  "description": "site sheo for system sheo, thats a lot of s's",
+  "main": "index.js",
+  "bin": {
+    "ss-site-sheo": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sheo",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "socket.io-client": "^4.6.1"
+  }
+}

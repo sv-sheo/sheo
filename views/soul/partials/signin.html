@@ -1,0 +1,24 @@
+		
+		<section id="signin" class="home_content_row">
+
+			<!-- SIGNIN --> 
+			<form id="signin_form" class="form" method="post" action="/signin" >
+
+				<div class="home_h1">SIGN IN</div>
+
+				<input class="input" name="nick" placeholder="NICKNAME" required minlength="2" maxlength="64" value="{{result.data.nick}}"  />
+				<input class="input" name="email" placeholder="E-MAIL (optional)" type="email" maxlength="128" value="{{result.data.email}}" />
+				<input class="input" name="pass" type="password" placeholder="PASSWORD" required minlength="6" maxlength="64" />
+				<input class="input" name="pass_confirm" type="password" placeholder="CONFIRM PASSWORD" required minlength="6" maxlength="64" />
+				<input class="submit" value="Sign In" type="submit">
+				<input id="antibot" name="antibot" hidden >
+
+				{{#unless result.ok}}
+
+					<div class="form_error">{{#each result.errors}}{{this}}<br>{{/each}}</div>
+
+				{{/unless}}
+
+			</form>
+			
+		</section>

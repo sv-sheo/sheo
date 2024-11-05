@@ -1,0 +1,2 @@
+
+//exports.recharts = require('recharts');

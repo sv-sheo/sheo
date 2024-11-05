@@ -1,0 +1,16 @@
+
+#gitignore
+
+.env
+package-lock.json
+config/.conf
+apps/
+node_modules/
+files/temp/
+files/build/
+files/images/
+files/unversioned/
+webpack/files/
+security/
+.vscode/
+logs/

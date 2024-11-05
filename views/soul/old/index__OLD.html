@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="robots" content="index, follow">
+        <meta name=”description” content=”SYSTEM SHEO”>
+        <meta name="author" content="SHEO">
+        
+        <title>TITLE</title>
+
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script src="https://{{socket_host}}:8442/socket.io/socket.io.js"></script>
+        <script src="/files/get/build/legacy/site.min.js?prqi={{request_id}}"></script>
+        <link href="/files/get/build/legacy/desktop.css?prqi={{request_id}}" type="text/css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+   
+        <div id="slock"><!--
+            
+            {{{left_menu}}}
+
+            {{{content}}}
+            
+        --></div>
+        
+        <div id="server_data" data-request_id="{{request_id}}" data-socket_host="{{socket_host}}"></div>
+        
+    </body>
+    
+</html>

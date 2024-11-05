@@ -1,0 +1,119 @@
+
+#login_form, #signin_form {
+
+    display:            inline-block;
+    padding-bottom:     50px;
+    width:              500px;
+
+}
+
+.form {
+    
+    padding:        10px;
+    box-sizing:     border-box;
+    
+}
+
+.submit, .button {
+    
+    margin-bottom:  10px;
+    padding:        10px 15px;
+    font-family:    $main_font;
+    font-size:      1.1em;
+    border:         none;
+    opacity:        0.9;
+    width:          100%;
+    box-sizing:     border-box;
+    transition:     opacity 250ms;
+    background:     $dark_color_2;
+    color:          $light_color;
+    text-decoration:none;
+
+    &:active, &:hover, &:visited { color: $light_color; }
+    
+}
+
+.input {
+    
+    margin-bottom:  10px;
+    padding:        10px 15px;
+    font-family:    $main_font;
+    font-size:      1.1em;
+    border:         none;
+    opacity:        1;
+    width:          100%;
+    box-sizing:     border-box;
+    border-left:    5px solid $form_invalid_border;
+    transition:     border-color 250ms;
+
+    &_valid {
+
+        border-left:    5px solid $form_valid_border !important;
+
+    }
+     
+}
+
+.input:focus, .input:hover {
+    
+    outline:        none;
+    opacity:        1;
+    border-left:    5px solid $form_active_border;
+    
+}
+
+.submit:hover, .button:hover {
+    
+    outline:        none;
+    opacity:        1;
+    cursor:         pointer;
+    background:     $dark_color_2;
+    color:          $light_color;
+    
+}
+
+.label {
+
+    display:        block;
+    text-align:     left;
+    margin-bottom:  10px;
+    padding:        2px 15px;
+    font-size:      1.1em;
+    box-sizing:     border-box;
+    border-left:    5px solid $dark_color_2;
+    cursor:         pointer;
+
+    & > .checkbox {
+
+        cursor:     pointer;
+        margin-right: 10px;
+
+    }
+
+    & > .span {
+
+        z-index: 1;
+
+    }
+
+}
+
+.signin_link {
+
+    padding:        5px 0;
+    font-size:		12pt;
+	line-height:	18pt;
+    text-align:     left;
+
+}
+
+.form_error {
+
+    padding:        15px 0;
+    color:          $error_color;
+    font-weight:    bold;
+    font-size:		14pt;
+	line-height:	21pt;
+    text-align:     left;
+
+}

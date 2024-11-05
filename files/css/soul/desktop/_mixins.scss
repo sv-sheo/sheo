@@ -1,0 +1,11 @@
+
+
+@mixin btn_sizes($size) {
+
+    font-size: 				floor($size*0.6);
+    line-height:			floor($size*0.6);
+    padding: 				0px floor($size/2);
+    height:					$size;
+    border-radius: 			ceil($size/6);
+
+}

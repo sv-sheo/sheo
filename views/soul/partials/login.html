@@ -1,0 +1,23 @@
+		
+		<section id="login" class="home_content_row">
+
+			<!-- LOGIN --> 
+			<form id="login_form" class="form" method="post" action="/login" >
+
+				<div class="home_h1">LOGIN</div>
+
+				<input class="input" name="name" placeholder="NICKNAME or E-MAIL" minlength="2" maxlength="64" value="{{result.data.name}}" />
+				<input class="input" name="pass" type="password" placeholder="PASSWORD" minlength="2" maxlength="64" />
+				<label class="label"><input class="checkbox" name="remember" type="checkbox"><span>Remember me</span></label>
+				<input class="submit" value="Log In" type="submit">
+				<div class="signin_link">Don't have an account yet? <a href="/signin">Sign In here.</a><br><a href="/reset_password">Forgotten password?</a></div>
+
+				{{#unless result.ok}}
+
+					<div class="form_error">{{#each result.errors}}{{this}}<br>{{/each}}</div>
+
+				{{/unless}}
+
+			</form>
+			
+		</section>

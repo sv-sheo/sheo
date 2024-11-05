@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="robots" content="index, follow">
+        <meta name=”description” content=”SYSTEM SHEO”>
+        <meta name="author" content="SHEO">
+        
+        <title>TITLE</title>
+        
+<!--        <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>-->
+        <script src="https://{{socket_host}}:8442/socket.io/socket.io.js"></script>
+        
+    </head>
+    
+    <body>
+    
+        <div>
+            
+            {{{body}}}
+            
+<!--            <button id="test" onclick="emit_socket()">TEST</button>-->
+            <button id="test2" onclick="add_doc()">ADD DOC</button>
+            <button id="test3" onclick="get_docs()">GET DOCS</button>
+            <button id="test4" onclick="remove_docs()">REMOVE DOCS</button>
+            <button id="test5" onclick="shutdown()">SHUTDOWN SERVER</button>
+            
+            <hr>
+            
+            <img src="/files/get/test.jpg?prqi={{request_id}}" >
+            
+            <script>
+                
+                var request_id = "{{request_id}}";
+                
+                console.log(request_id);
+                
+                var socket = io('https://{{socket_host}}:8442/sheo');
+                
+                console.log('initing socket');
+                
+                // init socket
+                socket.emit('INIT', {request_id: request_id});
+                
+                socket.on('INIT_RESULT', (data) => {
+                    
+                    console.log('INIT RESULT EVENT');
+                    console.log(data); 
+                    
+                });
+                
+                socket.on('SUCCESS', (data) => {
+                    
+                    console.log('SUCCESS EVENT');
+                    console.log(data); 
+                    
+                });
+                
+                socket.on('ERROR', (data) => {
+                    
+                    console.log('ERROR EVENT');
+                    console.log(data); 
+                    
+                });
+                
+                socket.on('test_users_back', function(data) {
+                    
+                    console.log('BACK');
+                    console.log(data);
+                
+                });
+                
+                function add_doc() {
+                    
+                    console.log('Emmiting Add Doc DUMMY');
+                   // socket.emit('add_doc', {action: 'add_doc'});
+                    
+                }
+                
+                function get_docs() {
+                    
+                    console.log('Emmiting Get Docs DUMMY');
+                   // socket.emit('get_docs', {action: 'get_docs'});
+                    
+                }
+                
+                function remove_docs() {
+                    
+                    console.log('Emmiting Remove Docs DUMMY');
+                  //  socket.emit('remove_docs', {action: 'remove_docs'});
+                    
+                }
+                
+                function shutdown() {
+                    
+                    console.log('Emmiting shtdown');
+                    socket.emit('shutdown', {action: 'shutdown'});
+                   /*C.process.EXECUTE_ON_MASTER({action: 'shutdown', worker_id: M.cluster.worker.id, data: {test: 'test'}})
+                        .then((result) => { console.log('SHUTDOWN SUCCESS'); })
+                        .catch((error) => { C.logger.catch_process_error({text: 'SHUTDOWN ERROR: '+error.message, error: error}) });*/
+                    
+                }
+                
+                
+            </script>
+            
+        </div>
+        
+    </body>
+    
+</html>

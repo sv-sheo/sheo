@@ -1,0 +1,22 @@
+
+<div class="app_block app_block_{{app.name}} {{#unless app.available}}app_block_unavailable{{/unless}}">
+	
+	{{#if app.available}}
+		<div class="app_block_bg absolute" style="background-image: url(/files/get/images/actilog_ribbon.jpg);"></div>
+		<div class="app_block_bg app_block_blur absolute" style="background-image: url(/files/get/images/actilog_ribbon.jpg);"></div>
+		<div class="app_block_backdrop_blur absolute"></div>
+	{{/if}}
+
+	{{#if app.available}}<a class="app_block_content" href="{{app.host}}{{app.id}}">{{else}}<div class="app_block_content">{{/if}}
+
+		<div class="app_block_header">{{app.header}}</div>
+		<div class="app_block_title">{{app.title}}</div>
+		<div class="app_block_text">{{{app.description}}}</div>
+
+		{{#unless app.available}}
+			<div class="app_block_status">{{{app.status}}}</div>
+		{{/unless}}
+
+	{{#if app.available}}</a>{{else}}</div>{{/if}}
+
+</div>

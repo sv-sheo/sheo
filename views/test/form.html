@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="robots" content="index, follow">
+        <meta name=”description” content=”SYSTEM SHEO”>
+        <meta name="author" content="SHEO">
+        
+        <script src="/files/get/js/site.min.js?grunt_task=compile_js"></script>
+        <link href="/files/get/css/desktop.css?grunt_task=compile_css" type="text/css" rel="stylesheet">
+        
+        <title>TITLE</title>
+        
+    </head>
+    
+    <body>
+    
+        <div class="test">REQUEST: {{HEADERS}}</div>
+        <hr>
+        <div>QUERY DATA: {{QUERY}}</div>
+        <hr>
+        <div>POST FIELDS: {{FIELDS}}</div>
+        <hr>
+        <div>POST FILES: {{FILES}}</div>
+        <hr>
+        <div>ERROR: {{ERROR}}</div>
+        <hr>
+        
+        <form method="post" action="/form" enctype="multipart/form-data">
+        
+            <input name="name">
+            <input name="name">
+            <input type="file" name="file">
+            <input type="file" name="file">
+            <input type="submit">
+            
+        </form>
+        
+        <form method="post" action="/form">
+        
+            <input name="name">
+            <input name="name">
+            <input type="submit">
+            
+        </form>
+        
+        <form method="get" action="/form">
+        
+            <input name="name">
+            <input type="submit">
+            
+        </form>
+        
+    </body>
+    
+</html>
