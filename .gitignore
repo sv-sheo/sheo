@@ -10,7 +10,7 @@ files/temp/
 files/build/
 files/images/
 files/unversioned/
+files/private/
 webpack/files/
-security/
 .vscode/
 logs/

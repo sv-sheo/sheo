@@ -1,9 +1,10 @@
 
 
-exports.get_webpack_url = function(host, app, site_config) {
+exports.get_webpack_url = function(host, app_, site_config) {
 
-        var allowed_apps    = {actilog: 'actilog', soul: 'soul'};
-        var app_name        = allowed_apps[app]; 
+        var allowed_apps    = {actilog: {name: 'actilog', folder: ''}, soul: {name: 'soul', folder: ''}};
+        var app             = allowed_apps[app_];
+        var app_name        = app?.name; 
         var webpack_url     = 'http://unknown.webpack.url/';
 
         if(app_name && site_config.apps[app_name]) {
@@ -13,8 +14,11 @@ exports.get_webpack_url = function(host, app, site_config) {
             let webpack_dev_server_protocol = site_config.apps[app_name].webpack_dev_server_protocol || 'http';
             let webpack_dev_server_host     = site_config.apps[app_name].webpack_dev_server_host || 'localhost';
             let webpack_dev_server_port     = site_config.apps[app_name].webpack_dev_server_port;
+            let folder                      = app?.folder ? (app.folder + '/') : '';
 
-            webpack_url = site_config.ENVIRONMENT === 'DEVELOPMENT' ? webpack_dev_server_protocol+'://'+webpack_dev_server_host+':'+webpack_dev_server_port+'/' : host+'files/get/build/production/'+app_name+'/'; 
+            webpack_url = site_config.ENVIRONMENT === 'DEVELOPMENT' 
+                                ? webpack_dev_server_protocol+'://'+webpack_dev_server_host+':'+webpack_dev_server_port+'/' 
+                                : host+'files/get/build/production/'+folder; 
         
         }
 
