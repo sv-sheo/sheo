@@ -111,8 +111,10 @@ exports.login_process = async function({Q, s, SITE}) {
 				cookie 	= C.ciphers.encrypt_sync(cookie, Q.data.code_geass);
 			let age 	= Q.data.post.fields.remember ? (30*24*60*60) : undefined; // if rmember is checked, remember the login for 30 days
 
-			s.cookie.set('soul', cookie, age, /*path*/ null, /*domain*/Q.true_host,/*, http_only*/);
+			s.cookie.set('soul', cookie, age, /*path*/ null, /*domain*/Q.host,/*, http_only*/);
 			// redirect at end
+
+			console.log('OOOOOOOOOOOOOOOOOOOOOOO', cookie, age, Q.host);
 		
 		} // invalid data; errors defined in login.validate
 
@@ -146,7 +148,9 @@ exports.login_process = async function({Q, s, SITE}) {
 // LOGOUT PROCESS
 exports.logout_process = async function({Q, s, SITE}) {
     console.log('??????????????????????????');
-    s.cookie.delete('soul', /*path*/ null, /*domain*/Q.true_host,/*, http_only*/);
+    s.cookie.delete('soul', /*path*/ null, /*domain*/Q.host,/*, http_only*/);
+
+	console.log('OOOOOOOOOOOOOOOOOOOOOOO', Q.host);
     s.redirect('login');
 
 	return {ok: 1};
@@ -254,7 +258,7 @@ exports.signin_process = async function({Q, s, SITE}) {
 								let cookie  = [soul.id, soul.nick, now].join('_');
 									cookie 	= C.ciphers.encrypt_sync(cookie, SITE.config.code_geass);
 
-								s.cookie.set('soul', cookie, /*age, path, domain, http_only*/);
+								s.cookie.set('soul', cookie, /*age*/null, /*path*/ null, /*domain*/Q.host,/*, http_only*/);
 						
 								Q.data.result.ok 		= 1;
 								Q.data.result.text 		= 'Succesfully created new soul: '+soul.nick;
