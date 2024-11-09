@@ -1,8 +1,6 @@
 
 #gitignore
 
-.env
-package-lock.json
 config/.conf
 apps/
 node_modules/

@@ -2,7 +2,7 @@
 
 exports.get_webpack_url = function(host, app_, site_config) {
 
-        var allowed_apps    = {actilog: {name: 'actilog', folder: ''}, soul: {name: 'soul', folder: ''}};
+        var allowed_apps    = {actilog: {name: 'actilog', folder: ''}, soul: {name: 'soul', folder: 'soul'}};
         var app             = allowed_apps[app_];
         var app_name        = app?.name; 
         var webpack_url     = 'http://unknown.webpack.url/';
